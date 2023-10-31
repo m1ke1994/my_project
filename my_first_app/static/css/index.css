@@ -1,0 +1,563 @@
+*{
+  margin: 0px;
+
+}
+header,.main_conteiner,.reviews_all,.footer{
+font-family: 'Playfair Display', serif;
+font-size: 22px;
+}
+header{
+  
+  width: 100%;
+  height: 80px;
+  background-color: #393737;
+  
+  
+}
+header a{
+  text-decoration: none;
+  
+  font-size: 20px;
+  color: white;
+  font-weight: bold;
+
+}
+.header_conteiner{
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  
+  
+}
+.navigation{
+  width: 100%;
+  display: flex;
+  justify-content:space-between;
+  line-height:  80px;
+  align-items: center;
+}
+
+/* .contact{
+  width: 50%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  line-height:  80px;
+
+}
+.icon_tel_plus{
+  display: flex;
+  
+  
+}
+.icon_tel{
+  margin-right: 10px;
+} */
+.btn button{
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 15px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/*стилизация контента*/
+
+
+.main_conteiner{
+  width: 80%;
+  height: auto;
+  margin: 0 auto;
+  background-color: #f5f5f5;
+  padding: 10px;
+  display: flex;
+  
+  flex-wrap: wrap;
+
+ 
+}
+main{
+  background-color: #f5f5f5;
+  padding-bottom: 10px;
+}
+h1{
+  text-align: center;
+  margin: 0;
+  padding: 50px;
+}
+.main_card{
+  background-color: rgb(247, 239, 235);
+  width: 32%;
+  border-radius: 15px;
+  position: relative;
+  margin: 0px 10px 20px 0px;
+}
+.img_rooms img{
+  width: 100%;    
+}
+.price {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #393737;
+  
+  height: auto;
+  vertical-align: middle;
+  text-align: center;
+  line-height: 50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 10px;
+  
+} 
+.rooms{
+  font-size: 18px; 
+  font-weight: bold;
+  text-align: center;
+}
+.adress{
+  font-size: 18px;
+  text-align: center;
+}
+.desc{
+  margin: 31px 0 25px 0;
+  line-height:35px;
+}
+.icon_beds_guests{
+  display: flex;
+  justify-content: space-around;
+  padding-bottom: 44px;
+
+}
+.guests,.beds{
+  display: flex;
+}
+.guests img{
+  margin-right: 10px;
+}
+.beds img{
+  margin-right: 10px;
+}
+/* разделение между блоками */
+.all_rooms{
+  font-size: 20px;
+  margin: 53px auto;
+  padding: 10px;
+  border: 2px solid black;
+  border-radius: 20px;
+  width: 10%;
+  text-align: center;
+}
+.all_rooms a{
+  text-decoration: none;
+  color: black;
+}
+/* <!--  блок отзывов --> */
+
+.review_conteiner{
+width: 80%;
+margin: 0 auto;
+height: auto;
+}
+#reviews_box_one{
+width: 46%;
+height: auto;
+box-sizing: border-box;
+background-color: #f4efed;
+padding-bottom: 46px;
+border: 1px solid black ;
+border-radius: 10px;
+margin-bottom: 30px;
+
+
+}
+#text{
+
+padding: 40px 60px 20px 40px;
+}
+#reviews_box_two{
+display: flex;
+padding-left: 40px;
+align-items: center;
+
+}
+#avatar{
+margin-right: 15px;
+}
+.avatar img{
+width: 50px;
+border-radius: 50%;
+}
+#name{
+font-size: 18px;
+font-weight: bold;
+margin-right: 15px;
+}
+#reviews_all{
+display: flex;
+justify-content: space-between;
+}
+/* ТОЧКИ */
+.point_one{
+border: 1px solid black;
+border-radius: 50%;
+width: 15px;
+height: 15px;
+margin-right: 25px;
+background-color: #f4efed;
+}
+.point_second{
+border: 1px solid black;
+border-radius: 50%;
+width: 15px;
+height: 15px;
+margin-right: 25px;
+background-color: #f4efed;
+
+
+}
+
+.point_all{
+display: flex;
+justify-content: center;
+margin-bottom: 40px;
+cursor: pointer;
+}
+.point_one:hover{
+background-color: rgb(51, 20, 205); 
+transition: all 0.3s;
+}
+.point_second:hover{
+background-color: rgb(51, 20, 205); 
+transition: all 0.3s;
+}
+.point_tree:hover{
+background-color: rgb(51, 20, 205); 
+transition: all 0.3s;
+}
+.all_review{
+font-size: 20px;
+margin: 55px auto;
+padding: 10px;
+border: 2px solid black;
+border-radius: 20px;
+width: 10%;
+text-align: center;
+}
+.all_review a{
+text-decoration: none;
+color: black;
+}
+/* футер */
+footer{
+width: 100%;
+height: auto;
+background-color: #1b1b1c;
+}
+.footer_conteiner{
+width: 80%;
+
+margin: 0 auto;
+display: flex;
+justify-content: space-between;
+padding: 50px 0;
+}
+.footer_links{
+width: 30%;
+display: flex;
+justify-content: space-around;
+align-items: center; 
+}
+.footer_mark{
+display: flex;
+width: 30%;
+align-items: center;
+ 
+}
+.footer_icon{
+box-sizing: border-box;
+}
+.icons_co{
+display: flex;
+justify-content:space-between ;
+}
+.icons{
+display: flex;
+justify-content:space-between ;
+
+
+}
+.footer_mark img{
+margin-right: 10px;
+}
+.footer_tel{
+margin-right: 10px;
+margin-bottom: 25px;
+}
+.footer_mark p{
+color: white;
+font-size: 20px;
+font-weight: bold
+}
+footer a{
+text-decoration: none;
+font-size: 20px;
+color: white;
+}
+/* company css */
+
+.main_company_conteiner{
+width: 80%;
+height: auto;
+margin: 0 auto;
+/* background-color: #f5f5f5; */
+/* background-color: white */
+;
+
+}
+h2{
+text-align: center;
+margin: 0;
+padding: 50px
+}
+
+.text_company{
+width: 90%;
+margin: 0 auto;
+border-left: 4px solid #000;
+padding: 25px;
+margin-bottom: 50px;
+}
+.contact_company_box{
+width: 50%;
+box-sizing: border-box;
+background-color: #f5f5f5;
+padding: 15px;
+}
+.contact_company_box p{
+margin: 25px;
+}
+.contact_company_box a{
+margin: 25px;
+}
+.general_company_box{
+display: flex;
+justify-content: center;
+}
+.contact_company_box_one{
+position: relative;
+}
+.icon-marker {
+position: absolute;
+top: 200px;
+right: 250px;
+
+}
+/* наша команда */
+.company_conteiner_out_time{
+width: 80%;
+height: auto;
+margin: 0 auto; 
+
+}
+.one_people{
+font-style: italic;
+
+}
+.name_people{
+font-weight: bold;
+}
+.one_people img{
+border: 2px solid black;
+border-radius: 50%;
+}
+.people{
+width: 30%;
+display: flex;
+align-items: center;
+justify-content: space-around;
+margin: 20px;
+
+}
+.people_cards{
+display: flex;
+justify-content: space-around;
+flex-wrap:wrap;
+}
+/* псевдоэлементы css */
+.navigation a:hover{
+  border-bottom: 4px solid rgb(51, 20, 205);
+  transition: all 0.3s;
+}
+.footer_links a:hover{
+  border-bottom: 4px solid rgb(51, 20, 205);
+  transition: all 0.3s;
+}
+.icons img{
+  padding: 5px;
+}
+.icons img:hover{
+border: 1px solid white;
+border-radius: 5px;
+background-color: rgb(51, 20, 205); 
+transition: all 0.3s;
+}
+.all_rooms:hover{
+  background-color: rgb(51, 20, 205); 
+  transition: all 0.3s;
+ 
+}
+.all_rooms a:hover{
+background-color: rgb(51, 20, 205); 
+transition: all 0.5s;
+color: white;
+font-weight: bold;
+}
+/* <p class="all_review"><a href="reviews.html">Все отзывы</a></p>  */
+.all_review:hover{
+background-color: rgb(51, 20, 205); 
+transition: all 0.3s;
+
+}
+.all_review a:hover{
+background-color: rgb(51, 20, 205); 
+transition: all 0.5s;
+color: white;
+font-weight: bold;
+}
+.icons img{
+border: 1px solid black;
+border-radius: 20px;
+}
+/* адаптив под разные экраны index.html*/
+@media only screen and (max-width: 1250px){
+.main_card p{
+  font-size: 14px;
+}
+.main_card{
+  font-size: 14px;
+}
+.price{
+  font-size: 14px;
+}
+.icon_beds_guests{
+  flex-direction: column;
+  align-items: center;
+}
+.footer_links{
+  flex-direction: column;
+}
+.footer_mark{
+  flex-direction: column;
+  text-align: center;
+}
+.contact_company_box,
+.mark_company{
+  width: 100%;
+}
+.general_company_box{
+  flex-direction: column;
+}
+.icon-marker{
+  display: none;
+}
+
+
+
+
+}
+@media only screen and (max-width: 800px){
+.main_conteiner{
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+}
+@media only screen and (max-width: 700px){
+.apartments,
+.reviews,
+.company,
+.footer_mark,
+.price,
+.footer_icon{
+  display: none;
+}
+.img_rooms {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+
+  
+.guests,
+.beds{
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 15px;
+}
+.main_card p{
+  font-size: 8px;
+}
+.main_card{
+  font-size: 8px;
+}
+.footer_links{
+  flex-direction: row;
+  width: 100%;
+  
+}
+.footer_links a{
+  font-size: 16px;
+  padding: 10px;
+}
+.footer_links img{
+  width: 15px;
+  
+  
+}
+#reviews_all,#reviews_box_two,#name{
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  font-size: 12px;
+  
+}
+#name,
+#data,
+#avatar
+img{
+  margin-right: 100px;;
+}
+.people_cards{
+  flex-direction: column;
+  align-items: center;
+}
+.people{
+  width: 80%;
+  display: flex;
+  justify-content: space-around;
+
+}
+}
+
+
+@media only screen and (max-width: 400px){
+.footer_links{
+  flex-direction: column;
+  width: 100%;
+  
+}
+#avatar img{
+  justify-content: center;
+}
+/* #avatar, */
+#name,
+#data{
+  display: none;
+
+}
+            
+
+}

@@ -1,0 +1,110 @@
+{% extends "my_first_app/index.html" %}
+{% load static %}
+
+
+    
+
+
+{% comment %} <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static "css/index.css" %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body> {% endcomment %}
+    
+     <!-- шапка -->
+     {%block header%}
+   <header>
+        <div class="header_conteiner">
+            <nav class="navigation">
+                <div class="icon_home"><a href="index.html"><img src="/static/img/header/logo.png"  alt="home"></a></div>
+                <div class="apartments"><a href="apartments.html">Квартиры</a></div>
+                <div class="reviews "><a href="reviews.html">Отзывы</a></div>
+                <div class="company"><a href="{% url 'company' %}">О компании</a></div>
+                <div class="btn"><button >Перезвоните мне</button></div>
+            </nav>
+        </div>
+    </header>
+    {%endblock%}
+    {%block main%}
+    <main> 
+        
+        <h1>Наши квартиры <br>
+            <form method="get">
+                {{form.as_p}}
+                <button type="submit">Поиск</button>
+            </form></h1>
+       
+        
+        <div class="main_conteiner">
+            
+
+        {% for apartament in apartments %} 
+        
+
+
+          <div class="main_card">
+              <div class="img_rooms"><img src="{{apartament.photo.url}}" alt="Квартира {{apartament.name}}" ></div>
+              <div class="price">{{apartament.price}}</div>
+              <div class="desc">
+                  <p class="rooms"><a href="{% url 'apartament' apart_id=apartament.id %}">{{ apartament.name }}</a>
+                  </p>
+                  <p class="adress">{{apartament.adress}}</p>
+              </div>
+              <div class="icon_beds_guests">
+              <div class="guests">
+                  <div><img src="static\img\main\icon-beds.png" alt=""></div>
+                  <div><p>{{apartament.guests}} гостя</p></div>
+              </div>
+              <div class="beds">
+                  <div><img src="static\img\main\icon-guests.png" alt=""></div>
+                  <div><p>{{apartament.beds}} спальных места</p></div>
+              </div>
+            </div>
+          </div> 
+      
+    {% endfor %}
+</div>
+
+</main>
+{% endblock %}
+{%block footer%}
+
+{% comment %} footer {% endcomment %} 
+ <footer>
+    <div class="footer_conteiner">
+        <div class="footer_links">
+            <a href="index.html"><img src="static/img/header/logo.png" alt="logo"></a>
+            <a href="apartments.html">Квартиры</a>
+            <a href="reviews.html">Отзывы</a>
+            <a href="company.html">О компании</a>
+        </div>
+        <div class="footer_mark">
+            <div><img src="/img/footer/icon-mapmarker.png" alt=""></div>
+            <div><p>Санкт-Петербург, набережная реки </p>
+            <p>Мойки, дом 40, литер «А», офис 210</p></div>
+        </div>
+        <div class="footer_icon">
+            <div class="footer_tel">
+                <img src="/img/footer/icon-phone.png" alt="">
+                <a href="tel:+7 (905) 255-00-10">+7 (905) 255-00-10</a>
+            </div>
+            <div class="icons">
+                <a href="#"><img src="static\img_footer\icon-fb.png" alt="#"></a>
+                <a href="#"><img src="static\img_footer\icon-insta.png" alt="#"></a>
+                <a href="#"><img src="static\img_footer\icon-mail.png" alt="#"></a>
+                <a href=""><img src="static\img_footer\icon-vk.png" alt="#"></a>
+            </div>
+            </div>
+        </div>
+     
+</footer> 
+{%endblock%}
+      </body>
+      </html>

@@ -1,0 +1,71 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static "css/my_first_app_detail.css" %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+     <!-- шапка -->
+     <header>
+        <div class="header_conteiner">
+            <nav class="navigation">
+                <div class="icon_home"><a href="index.html"><img src="/static/img/header/logo.png"  alt="home"></a></div>
+                <div class="apartments"><a href="apartments.html">Квартиры</a></div>
+                <div class="reviews "><a href="reviews.html">Отзывы</a></div>
+                <div class="company"><a href="{% url 'company' %}">О компании</a></div>
+                <div class="btn"><button >Перезвоните мне</button></div>
+            </nav>
+        </div>
+    </header>
+        
+<h1>{{apart.name}}</h1>
+
+
+<div class="main_conteiner">
+    <div class="main_card">
+        <div class="img_rooms"><img src="{{apart.photo.url}}" alt="Квартира {{apart.name}}" ></div>
+        <div class="price">{{apart.price}}</div>
+        <div class="desc">
+            <p class="rooms"><a href="{% url 'apartament' apart_id=apart.id %}">{{ apart.name }}</a>
+            </p>
+            <p class="adress">{{apart.adress}}</p>
+        </div>
+        <div class="icon_beds_guests">
+            <div class="guests">
+                <div><img src="/static/img/main/icon-guests.png" alt="" width="20px"></div>
+                <div><p>{{apart.guests}} гостя</p></div>
+            </div>
+            <div class="beds">
+                <div><img src="/static/img/main/icon-beds.png" alt="" width="20px"></div>
+                <div><p>{{apart.beds}} спальных места</p></div>
+            </div>
+      </div>
+</div> 
+<div class="contact_form">
+    <h3>Контактная форма</h3>
+    {% if sent %}
+    <p><span>Спасибо! Ваша заявка принята.</span></p>
+    {% endif %}
+   
+
+    <form method="post">
+        {% csrf_token %}
+        {{form.as_p}}
+      <button class="send_btn"type="submit">Отправить заявку</button>
+    
+    </form>
+
+</div>
+
+</div>
+      
+    
+</body>
+</html>

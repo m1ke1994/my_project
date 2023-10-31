@@ -1,0 +1,186 @@
+{% extends "my_first_app/index.html" %}
+{% load static %}
+
+{% comment %} <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static "css/index.css" %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+</head> {% endcomment %}
+{% comment %} <body> {% endcomment %}
+     {% comment %} <!-- шапка --> {% endcomment %}
+    <!-- шапка -->
+    
+    {%block header%}
+    
+    <header>
+        <div class="header_conteiner">
+            <nav class="navigation">
+                <div class="icon_home"><a href="index.html"><img src="/static/img/header/logo.png"  alt="home"></a></div>
+                <div class="apartments"><a href="{% url 'apartaments' %}">Квартиры</a></div>
+                <div class="reviews "><a href="reviews.html">Отзывы</a></div>
+                <div class="company"><a href="{% url 'company' %}">О компании</a></div>
+                <div class="btn"><button >Перезвоните мне</button></div>
+            </nav>
+        </div>
+    </header>
+    {%endblock%}
+
+    {%block company%} 
+    <main class="company">
+        <div class="main_company_conteiner">
+            <h2>О компании</h2>
+        
+        <div class="text_company">
+            <p>Компания «ПитерРентПлюс» основана в 2012 году и предлагает посуточную аренду элитных 
+            квартир в историческом районе Санкт-Петербурга. Наши апартаменты расположены в шаговой доступности от Эрмитажа,
+             Зимнего Дворца, Мариинского театра и Исаакиевского собора.
+
+            Помимо аренды мы предлагаем: трансфер из аэропорта, подготовку отчетных документов, наличную и безналичную оплату,
+             помощь в оформлении виз for foreign residents. Мы используем транзитивную систему размещения, что позволяет
+              бронировать квартиры в любое время из любого места со 100% гарантией заселения. А если вы передумаете, то
+               отменить бронь без дополнительных комиссий можно за 48 часов.</p>
+        </div>
+    </div>
+    </main>
+    {% comment %} <!-- Контакты --> {% endcomment %}
+    <section class="contact_company">
+        <div class="main_company_conteiner">
+            <h2>Контакты</h2>
+            <div class="general_company_box">
+                <div class="contact_company_box">
+                    <p class="hour_job">Работаем для вас <b>с 9 до 21</b>, без выходных</p>
+                    <p class="adress_job"><b>Адрес</b>: Санкт-Петербург, набережная реки Мойки, 
+                        дом 40, литер «А», офис 210</p>
+                    <p class="telephone_company"><b>Телефон</b>: 8 (905) 255-00-10</p>
+                    <p class="emeil_company"><b>E-mail</b>: office@piter-rent-plus.ru</p>
+                    <div class="icon_company_general">
+                        <a href="#"><img src="/static/img/company/free-icon-font-facebook-6422199.png" width="25px" alt="fb" class="icon_company_social"></a>
+                        <a href="#"><img src="/static/img/company/free-icon-font-instagram-6422200.png" width="25px" alt="insta" class="icon_company_social"></a>
+                        <a href="#"><img src="/static/img/company/free-icon-font-vk-6422212.png" width="25px" alt="vk" class="icon_company_social"></a>
+                    </div>
+                </div>
+                <div class="contact_company_box_one">
+                    <img src="/static/img/company/map.png" alt="mark_company" class="mark_company">
+                    <img src="/static/img/company/icon-marker.png" alt="icon-marker" class="icon-marker">
+                </div>
+        </div>
+    </div>
+     
+    </section>
+   <!--  наша команда -->
+
+    <section class="out_time">
+        <div class="company_conteiner_out_time">
+            <h2>Наша команда</h2>
+            <div class="people_cards">
+                <!-- первая карта -->
+                <div class="people">
+                    <div class="one_people">
+                        <img src="/static/img/company/04.png" alt="one_people">
+                    </div>
+                    <div class="one_people">
+                        <p class="name_people">Новиков Иван</p>
+                        <p class="name_job">Администратор</p>
+                        <p class="name_tel">8 (905) 255-00-10</p>
+                        <p class="name_mail">ceo@piter-rent-plus.ru</p>
+                        
+                    </div>
+                </div>
+                <!-- вторая карта -->
+                <div class="people">
+                    <div class="one_people">
+                        <img src="/static/img/company/05.png" alt="one_people">
+                    </div>
+                    <div class="one_people">
+                        <p class="name_people">Константинова Анна</p>
+                        <p class="name_job">Администратор</p>
+                        <p class="name_tel">8 (905) 255-00-10</p>
+                        <p class="name_mail">ceo@piter-rent-plus.ru</p>
+                        
+                    </div>
+                </div>
+                <!-- третья карта -->
+                <div class="people">
+                    <div class="one_people">
+                        <img src="/static/img/company/03.png" alt="one_people">
+                    </div>
+                    <div class="one_people">
+                        <p class="name_people">Иванова Виктория</p>
+                        <p class="name_job">Администратор</p>
+                        <p class="name_tel">8 (905) 255-00-10</p>
+                        <p class="name_mail">ceo@piter-rent-plus.ru</p>
+                        
+                    </div>
+                </div>
+                <!-- четвертая карта -->
+                <div class="people">
+                    <div class="one_people">
+                        <img src="/static/img/company/01.png" alt="one_people">
+                    </div>
+                    <div class="one_people">
+                        <p class="name_people">Семенов Александр</p>
+                        <p class="name_job">Генеральный директор</p>
+                        <p class="name_tel">8 (981) 452-79-72</p>
+                        <p class="name_mail">ceo@piter-rent-plus.ru</p>
+                        
+                    </div>
+                </div>
+                <!-- пятая карта -->
+                <div class="people">
+                    <div class="one_people">
+                        <img src="/static/img/company/02.png" alt="one_people">
+                    </div>
+                    <div class="one_people">
+                        <p class="name_people">Азарова Юлия</p>
+                        <p class="name_job">Коммерческий директор</p>
+                        <p class="name_tel">8 (981) 452-79-72</p>
+                        <p class="name_mail">ceo@piter-rent-plus.ru</p>
+                        
+                    </div>
+                </div>
+            </div>
+            
+
+        </div>
+    </section>
+    {%endblock%}
+
+    {%block footer%}
+    
+    <footer>
+        <div class="footer_conteiner">
+            <div class="footer_links">
+                <a href="index.html"><img src="/static/img/footer/logo.png" alt="logo"></a>
+                <a href="apartments.html">Квартиры</a>
+                <a href="reviews.html">Отзывы</a>
+                <a href="company.html">О компании</a>
+            </div>
+            <div class="footer_mark">
+                <div><img src="/img/footer/icon-mapmarker.png" alt=""></div>
+                <div><p>Санкт-Петербург, набережная реки </p>
+                <p>Мойки, дом 40, литер «А», офис 210</p></div>
+            </div>
+            <div class="footer_icon">
+                <div class="footer_tel">
+                    <img src="/img/footer/icon-phone.png" alt="">
+                    <a href="tel:+7 (905) 255-00-10">+7 (905) 255-00-10</a>
+                </div>
+                <div class="icons">
+                    <a href="#"><img src="/static/img/footer/icon-fb.png" alt="#"></a>
+                    <a href="#"><img src="/static/img/footer/icon-insta.png" alt="#"></a>
+                    <a href="#"><img src="/static/img/footer/icon-mail.png" alt="#"></a>
+                    <a href="#"><img src="/static/img/footer/icon-vk.png" alt="#"></a>
+                </div>
+                </div>
+            </div>
+         
+    </footer>
+    {%endblock%}
+      </body>
+      </html>
