@@ -11,6 +11,12 @@ from my_first_app.forms import ApartamentsFilterForms
 def my_first_app_list(request):
     apartments = Аpartments.objects.all()
     form=ApartamentsFilterForms(request.GET)
+    if form.is_valid():
+        if form.cleaned_data["min_price"]:
+            apartments=apartments.filter(price__gte=form.cleaned_data["min_price"])
+            if form.cleaned_data["max_price"]:
+                apartments=apartments.filter(price__lte=form.cleaned_data["max_price"])
+
     return render(request, "my_first_app/my_first_app_list.html", {"apartments": apartments,"form":form})
 
 
